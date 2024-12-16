@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "917907116013",
+    "project_id": "instax-bb7d7",
+    "storage_bucket": "instax-bb7d7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917907116013:android:997669dd12a99910f1a1e4",
+        "android_client_info": {
+          "package_name": "com.example.instax_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtv0hzPd_Ulk99PoLIzvYW0I3sogWk4nk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
