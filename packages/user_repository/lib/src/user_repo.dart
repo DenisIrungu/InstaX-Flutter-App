@@ -1,7 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:user_repository/user_repository.dart';
 
 abstract class UserRepository{
-  // ignore: non_constant_identifier_names
+  Stream<User?> get user;
+
+
   Future<MyUser> signUp(MyUser myUser, String password);
 
   Future<void> signIn(String email, String password);
@@ -9,5 +12,9 @@ abstract class UserRepository{
   Future<void> logOut();
 
   Future<void> resetPassword(String email);
+
+  Future<void>setUserData(MyUser user);
+
+  Future<MyUser> getUser(String myUserId);
   
 }
