@@ -8,17 +8,20 @@ class FirebaseUserRepository implements UserRepository {
   //Constructor
   FirebaseUserRepository({FirebaseAuth? firebaseAuth})
       : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance;
+      
   //class parameter
   final FirebaseAuth _firebaseAuth;
   final userCollection = FirebaseFirestore.instance.collection('user');
+
   //The User Stream to help us get/access the user document from firestore
   @override
-  Stream<User?> get user{
-    return _firebaseAuth.authStateChanges().map((firebaseUser){
+  Stream<User?> get user {
+    return _firebaseAuth.authStateChanges().map((firebaseUser) {
       final user = firebaseUser;
       return user;
     });
   }
+
   //Method to set User data
   @override
   Future<void> setUserData(MyUser user) async {
