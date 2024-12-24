@@ -13,12 +13,12 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
   })  : _userRepository = userRepository,
         super(SignInInitial()) {
     on<SignInRequired>((event, emit) async {
-      emit(SignInProceeding());
+      emit(SignInLoading());
       try {
         await _userRepository.signIn(event.email, event.password);
         emit(SignInSuccess());
       } catch (e) {
-        emit(const SignInFairure());
+        emit(const SignInFailure());
       }
     });
     on<SignOutRequired>((event, emit) async {

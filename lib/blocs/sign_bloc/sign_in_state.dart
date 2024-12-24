@@ -11,10 +11,10 @@ class SignInInitial extends SignInState {}
 
 class SignInSuccess extends SignInState {}
 
-class SignInFairure extends SignInState {
+class SignInFailure extends SignInState {
   final String? massage;
 
-  const SignInFairure({this.massage});
+  const SignInFailure({this.massage});
 }
 
-class SignInProceeding extends SignInState {}
+class SignInLoading extends SignInState {}
